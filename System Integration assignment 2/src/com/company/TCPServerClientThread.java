@@ -48,6 +48,12 @@ public class TCPServerClientThread extends Thread {
                 System.out.println(ex);
             }finally{
                 System.out.println("Client " + clientNo + " exit!! ");
+                try{
+                    serverClient.close();
+                }catch(Exception e){
+                    System.out.println("Failed to close socket :" + e.getMessage());
+                    throw e;
+                }
             }
         }
 }
