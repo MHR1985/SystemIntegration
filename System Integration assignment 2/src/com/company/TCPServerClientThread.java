@@ -52,7 +52,6 @@ public class TCPServerClientThread extends Thread {
                     serverClient.close();
                 }catch(Exception e){
                     System.out.println("Failed to close socket :" + e.getMessage());
-                    throw e;
                 }
             }
         }
